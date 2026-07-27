@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #001A33, #003CA6, #0054A6);
+    background-size: 400% 400%;
+    
+    padding: 80px;
+    animation: gradient 20s ease infinite;
+
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.calculadora-container {
+    background-color: #ffffff;
+    backdrop-filter: blur(15px);
+    width: 1000px;
+    border: 1px solid #c0c0c0;
+    position: relative;
+    padding-bottom: 60px; 
+}
+
+
+.cabecalho {
+    background-color: #0d2a63; 
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 28px;
+    font-family: 'Arial Narrow', Arial, sans-serif; 
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+
+.area-calculo {
+    display: grid;
+    grid-template-columns: 220px 120px; 
+    row-gap: 25px; 
+    column-gap: 30px; 
+    align-items: start;
+}
+
+.label-calculo {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 35px; 
+    font-size: 15px;
+    text-align: center;
+}
+
+.campo-agrupado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #a6a6a6;
+    outline: none;
+}
+
+.input-azul {
+    background-color: #b4c6e7;
+}
+
+.input-verde {
+    background-color: #c6e0b4;
+}
+
+.aviso-vermelho {
+    color: #ff0000;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.area-instrucoes {
+    width: 400px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.area-instrucoes h4 {
+    text-decoration: underline;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.area-instrucoes p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+.nav {
+    background-color: #0d2a63;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    
+}
+
+.nav-links li a:hover {
+    background-color:#00bfff; 
+    transition: width 0.3s ease; 
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
