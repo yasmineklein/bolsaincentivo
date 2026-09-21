@@ -117,17 +117,13 @@ input[type="text"] {
 
 /* --- MENU DE NAVEGAÇÃO --- */
 .nav {
+    background-color: #0d2a63;
     width: 100%;
-    background: transparent; 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-    padding: 15px 20px;
     position: fixed; 
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-container {
@@ -163,4 +159,22 @@ input[type="text"] {
     background-color:#00bfff; 
     transition: width 0.3s ease; 
     box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
+.btn-limpar {
+    background-color: #0d2a63; 
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-limpar:hover {
+    background-color: #b4c6e7; 
+    color: #0d2a63;
 }
