@@ -17,44 +17,55 @@
 
     <div class="calculadora-container">
         
-        <!-- Título Centralizado -->
         <div class="cabecalho">
             CALCULADORA PROJETO INCENTIVO
         </div>
 
         <div class="conteudo-principal">
             
-            <!-- Lateral Esquerda: Nomes e Campos alinhados -->
             <div class="area-calculo">
                 
-                <!-- Linha 1 -->
+                
                 <div class="label-calculo">DESCONTO CURSO TODO</div>
                 <div class="campo-agrupado">
                     <input type="text" id="descontoCursoTodo" class="input-azul" oninput="calcularProjetoIncentivo()">
+
+                    <span id="avisoNoventa" class="aviso-vermelho" style="display: none; font-weight: bold; color: #cc0000; margin-top: 5px;">
+                      Atenção: Desconto acima de 90%
+                    </span>
                 </div>
 
-                <!-- Linha 2 -->
-                <div class="label-calculo">BOLSA CD- INCONDICIONAL</div>
+                
+                <div class="label-calculo">Bolsa CD- Campanha Padrão</div>
                 <div class="campo-agrupado">
                     <input type="text" id="bolsaIncondicional" class="input-verde" readonly>
                     <span class="aviso-vermelho">Não preencher</span>
                 </div>
 
-                <!-- Linha 3 -->
-                <div class="label-calculo">BOLSA INCENTIVO</div>
+                
+                <div class="label-calculo">Bolsa Incentivo</div>
                 <div class="campo-agrupado">
                     <input type="text" id="bolsaIncentivo" class="input-verde" readonly>
                     <span class="aviso-vermelho">Não preencher</span>
                 </div>
 
+                <div class="container-botao" style="grid-column: span 2; display: flex; justify-content: center; margin-top: 15px;">
+                    <button class="btn-limpar" onclick="limparCampos()">Limpar Tudo</button>
+                </div>
+
             </div>
 
-            <!-- Lateral Direita: Instruções -->
+            
             <div class="area-instrucoes">
+
+                <h4>Quando utilizar?</h4>
+                <p>Para desmembrar o percentual integral de desconto do aluno entre as bolsas Padrão e Incentivo.</p>
+                <br>
+
                 <h4>Instruções</h4>
                 <p>Preencher somente campos azul</p>
                 <p>Desconto Curso Todo - Preencher percentual total da bolsa do aluno</p>
-                <p>Bolsa CD- Incondicional - Será o valor do desconto total -10pp</p>
+                <p>Bolsa CD- Campanha Padrão - Será o valor do desconto total -10pp</p>
                 <p>Bolsa Incentivo - Será o valor da Incentivo + Incondicional para atingir o valor do curso todo</p>
             </div>
 
